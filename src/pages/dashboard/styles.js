@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Responsive } from "../../styles/responsive"
+import { Responsive } from "../../styles/responsive.js"
 
 
 export const Background = styled.div`
@@ -11,7 +11,7 @@ export const Background = styled.div`
     padding: 20px;
     overflow-y: auto;
 
-    
+
     ${Responsive.tablet`
     flex-direction: column;
   `}
