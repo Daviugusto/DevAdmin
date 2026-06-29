@@ -1,71 +1,70 @@
 import { styled } from "styled-components"
 import { NavLink } from "react-router-dom";
-import { Responsive } from "../../styles/responsive";
 
-export const MainBar = styled.div`
-  width: 250px;
-  min-height: 100vh;
-  background: #163a63;
-  color: #fff;
+
+export const MainBar = styled.aside`
+  width: 240px;
+  height: 100vh;
+  background: #111827;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 30px 0;
+  padding: 20px;
 
-   ${Responsive.tablet`
-    width: 80px;
-  `}
-
-  ${Responsive.mobile`
-    display: none;
-  `}
-`;
-
-
-
-export const User = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-
-  img {
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 8px;
-    object-fit: cover;
-    margin-bottom: 20px;
+ @media (max-width: 768px) {
+    position: fixed;
+    left: ${({ className }) => (className === "open" ? "0" : "-260px")};
+    top: 0;
+    z-index: 1000;
   }
 `;
 
-export const Nome = styled.h1`
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 6px;
+export const User = styled.div`
+  margin-bottom: 40px;
+`;
+
+export const Nome = styled.h3`
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Email = styled.p`
-  color: #d3d3d3;
-  font-size: 13px;
+  font-size: 12px;
+  color: #9ca3af;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
+
 export const MenuItems = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 
   a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+    color: #9ca3af;
+    padding: 10px;
+    border-radius: 8px;
     transition: 0.2s;
   }
 
   a:hover {
-    color: #3b82f6;
+    background: #1f2937;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    a span {
+      display: none;
+    }
   }
 `;
 

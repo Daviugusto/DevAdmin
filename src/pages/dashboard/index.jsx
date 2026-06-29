@@ -3,7 +3,7 @@ import { Background, Boxcards, BoxCharts,Title} from './styles.js'
 import {Boxer} from '../../components/boxer/styles.js'
 import Chart from '../../components/charts/charts.jsx'
 import BarCharts from '../../components/charts/chartsbar.jsx'
-import Sidebar from '../../components/sidebar/sidebar.jsx'
+import Layout from '../../components/Layout/layout.jsx'
 import StatCard from '../../components/statcard/statcard.jsx'
 
 
@@ -15,7 +15,7 @@ function Dashboard() {
 
 
         <Boxer>
-            <Sidebar></Sidebar>
+            <Layout></Layout>
             <Background>
             <Boxcards>
                 <StatCard

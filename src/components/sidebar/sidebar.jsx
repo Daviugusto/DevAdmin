@@ -2,7 +2,7 @@ import { MainBar,User,Nome,Email,MenuItems } from "./styles.js";
 import {LayoutDashboard,ChartColumn,Settings} from "lucide-react";
 import { Link } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({ open, setOpen }) {
 
 
   return (
@@ -12,22 +12,13 @@ function Sidebar() {
         <Email>administrador@gmail.com</Email>
     </User>
     <MenuItems>
-    <Link to="/">
-  
-  <LayoutDashboard/> Dashboard
- 
+    <Link to="/" onClick={() => setOpen(false)}>
+  <LayoutDashboard size={18}/> Dashboard
 </Link>
-
-<Link to="/analytics">
-
-     <ChartColumn/>Analytics
-
+<Link to="/analytics" onClick={() => setOpen(false)}>
+     <ChartColumn size={18}/>Analytics
 </Link>
-
-
-
-</MenuItems>
-    
+</MenuItems>  
   </MainBar>
   )
 }
