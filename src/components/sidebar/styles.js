@@ -13,7 +13,7 @@ export const MainBar = styled.aside`
 
  @media (max-width: 768px) {
     position: fixed;
-    left: ${({ className }) => (className === "open" ? "0" : "-260px")};
+    left: ${({ open }) => (open ? "0" : "-260px")};
     top: 0;
     z-index: 1000;
   }

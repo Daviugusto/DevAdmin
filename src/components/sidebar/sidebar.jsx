@@ -6,7 +6,7 @@ function Sidebar({ open, setOpen }) {
 
 
   return (
-  <MainBar>
+  <MainBar open={open}>
     <User>
         <Nome>Administrador</Nome>
         <Email>administrador@gmail.com</Email>

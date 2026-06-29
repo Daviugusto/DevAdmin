@@ -1,23 +1,23 @@
 import { useState } from "react";
-import Sidebar from "../../components/sidebar/sidebar.jsx";
+import Sidebar from "../sidebar/sidebar.jsx";
+import { MenuButton } from "./styles";
 
-function Layout({ children }) {
+export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div style={{ display: "flex" }}>
-      
-      <button onClick={() => setOpen(!open)}>
+    <>
+      <MenuButton onClick={() => setOpen(!open)}>
         ☰
-      </button>
+      </MenuButton>
 
-      <Sidebar open={open} setOpen={setOpen} />
+      <div style={{ display: "flex" }}>
+        <Sidebar open={open} setOpen={setOpen} />
 
-      <div style={{ flex: 1 }}>
-        {children}
+        <div style={{ flex: 1, minWidth: 0 }}>
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
-
-export default Layout;
