@@ -1,11 +1,13 @@
 import {PieChart,Pie,Tooltip,ResponsiveContainer,Cell,Legend} from "recharts";
 import { dataPie,Colors } from "../../data/dashboardData";
+import { ChartBox } from './styles.js';
 
 function Analyticchart() {
 
 
     return(
-<ResponsiveContainer width="800" height={300}>
+      <ChartBox>
+<ResponsiveContainer width="100%" height={300}>
   <PieChart>
     <Pie
       data={dataPie}
@@ -28,6 +30,7 @@ function Analyticchart() {
     <Tooltip />
   </PieChart>
 </ResponsiveContainer>
+</ChartBox>
     )
 }
 

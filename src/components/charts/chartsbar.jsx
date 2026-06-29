@@ -1,19 +1,12 @@
-import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
+import {ResponsiveContainer,BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip,Legend,} from "recharts";
 
 import { revenueDataBar } from "../../data/dashboardData";
+import { ChartBox } from './styles.js';
 
 function BarCharts() {
   return (
-    <ResponsiveContainer width={615} height={200}>
+    <ChartBox>
+    <ResponsiveContainer width="100%" height={200}>
       <BarChart data={revenueDataBar}>
         <CartesianGrid strokeDasharray="3 3" />
 
@@ -38,6 +31,7 @@ function BarCharts() {
         />
       </BarChart>
     </ResponsiveContainer>
+    </ChartBox>
   );
 }
 

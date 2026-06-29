@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
 import { revenueData } from "../../data/dashboardData.js"
+import { ChartBox } from './styles.js';
 
 function Chart() {
 
 
   return (
-    <ResponsiveContainer width={615} height={200}>
+    <ChartBox>
+    <ResponsiveContainer width="100%" height={200}>
       <LineChart data={revenueData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="mes" />
@@ -17,6 +19,7 @@ function Chart() {
           stroke="#3b82f6" />
       </LineChart>
     </ResponsiveContainer>
+    </ChartBox>
   )
 }
 
