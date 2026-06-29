@@ -1,6 +1,6 @@
 import {Boxer}from '../../components/boxer/styles.js'
 import StatCard from '../../components/statcard/statcard.jsx'
-import Sidebar from "../../components/sidebar/Sidebar.jsx";
+import Sidebar from "../../components/sidebar/sidebar.jsx";
 import Analyticchart from '../../components/charts/chartsanalytics.jsx';
 import { BoxAnalytics ,BoxcardsAnaly,ChartContainer,ChartTitle,ChartWrapper,SummaryContainer,SummaryList,SummaryItem,ColorBox } from './styles.js'
 
