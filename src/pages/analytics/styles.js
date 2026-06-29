@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Responsive } from "../../styles/responsive"
 
 export const BoxAnalytics = styled.div`
     background-color: gray;
@@ -8,6 +9,15 @@ export const BoxAnalytics = styled.div`
     gap: 10px;
     padding: 20px;
     overflow-y: auto;
+
+    ${Responsive.tablet`
+    flex-direction: column;
+  `}
+
+  ${Responsive.mobile`
+    padding: 10px;
+  `}
+
 `
 
 export const BoxcardsAnaly = styled.div`

@@ -1,5 +1,6 @@
 import { styled } from "styled-components"
 import { NavLink } from "react-router-dom";
+import { Responsive } from "../../styles/responsive";
 
 export const MainBar = styled.div`
   width: 250px;
@@ -10,7 +11,17 @@ export const MainBar = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 30px 0;
+
+   ${Responsive.tablet`
+    width: 80px;
+  `}
+
+  ${Responsive.mobile`
+    display: none;
+  `}
 `;
+
+
 
 export const User = styled.div`
   display: flex;

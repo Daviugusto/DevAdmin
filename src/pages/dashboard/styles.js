@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Responsive } from "../../styles/responsive"
 
 
 export const Background = styled.div`
@@ -9,6 +10,16 @@ export const Background = styled.div`
     gap: 10px;
     padding: 20px;
     overflow-y: auto;
+
+    
+    ${Responsive.tablet`
+    flex-direction: column;
+  `}
+
+  ${Responsive.mobile`
+    padding: 10px;
+  `}
+
 `
 
 export const Boxcards = styled.div`
