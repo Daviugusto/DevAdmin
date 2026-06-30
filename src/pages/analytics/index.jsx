@@ -27,12 +27,6 @@ function Analytics() {
                     background="#ffffff"
 
                 />
-                <StatCard
-                    title="Annually Average"
-                    value="25.9K$"
-                    background="#ffffff"
-
-                />
                 </BoxcardsAnaly>
         
             <ChartContainer>
